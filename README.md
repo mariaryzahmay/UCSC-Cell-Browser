@@ -40,45 +40,48 @@ Name- Maria Ryzah May I. Vertudazo
 
 ## 6. Expression Plot
 
-- **Selected cluster/cells:** []
-- **Comparison with other cells:** []
-- **What the plot shows:** []
+- **Selected cluster/cells:** Monocyte 2 cluster [480 cells, 19 percent of the dataset] and colored cells by BRCA1 
+- **Comparison with other cells:** Both groups had a similar distribution, mostly near 0.01. The other cells had a few cells reaching the dataset maximum of 2.18, while Monocyte 2 reached about 1.3. 
+- **What the plot shows:** Both violins have wide base near the lowest value and a thin tail upward, so most cells in both groups express very little BRCA1. Monocyte 2 was not clearly higher than the other cells, and BRCA1 not strongly specific to this cluster. On the map the cluster looks dark, but that coloring ranks cells within the dataset, so it exaggerates small differences between cells whose values are all 0.01.  
 
 ## 7. Marker Genes
 
-- **Cluster/cell type examined:** []
-- **Marker gene 1:** []
-- **Marker gene 2:** []
-- **Marker gene 3:** []
-- **Is BRCA1 a cell-type marker in this dataset?** []
+- **Cluster/cell type examined:** Monocyte 2 
+- **Marker gene 1:** LYZ[dark purple dot]
+- **Marker gene 2:** CST3[dark dot]
+- **Marker gene 3:** CD14
+- **Is BRCA1 a cell-type marker in this dataset?** No. BRCA1 was pale and similar in every cell type on the dot plot, and the Monocyte 2 violin was not clearly different from the other cells. In contrast with LYZ, CST3 and CD14 were clearly higher in Monocyte 2. 
 
 ## 8. Disease Gene vs. Marker Gene
 
 - **Assigned disease gene:** BRCA1
-- **Marker gene:** []
-- **More cell-type-restricted gene:** []
-- **More broadly expressed gene:** []
-- **Interpretation:** []
+- **Marker gene:** LYZ
+- **More cell-type-restricted gene:** LYZ. It was high in Monocyte 1 and , with some signal in macrophages and cDCs, and low in T cells, NK cells, and cancer cells. 
+- **More broadly expressed gene:** BRCA1 with low but detectable in all cells types, with no group clearly higher. 
+- **Interpretation:** LYZ marks a specific lineage and can be used to identify them. BRCA1 does not separate any cell type from the others in the dataset. BRCA1 is broadly expressed disease gene here, not a cell-type marker. 
 
 ## 9. Connection to Genome Browser and ClinVar
 
 - **Chromosome location:** Chromosome 17
 - **Disease-associated variant:** c.68_69del (185delAG)
-- **Cell types expressing BRCA1:** []
-- **Biological interpretation:** []
-- **Can this dataset prove causation?** []
+- **Cell types expressing BRCA1:** CD4 and CD8 T cells, NK cells, Monocyte 1 and 2, macrophages, cDCs, and the cancer clusters.
+- **Biological interpretation:** BRCA1 is a DNA repair gene needed at modest levels in many cell types, so low, widespread expression  is expected.
+- **Can this dataset prove causation?** No. It shows where BRCA1 is expressed in one’s patient’s cells, but it does not test the effect of the variant. 
 
 ## 10. Reflection
 
-1. What did the UCSC Cell Browser show that the UCSC Genome Browser could not?
-2. Why can the same gene have different expression levels among cell types?
-3. Why should zero or very low single-cell expression be interpreted carefully?
-4. Why combine genomic location, variants, and cell-specific expression?
-5. What was the most interesting observation about BRCA1?
+1.  What did the UCSC Cell Browser show that the UCSC Genome Browser could not?
+Cell Browser showed expression in individual cells and cell types, such as T cells, monocytes, and cancer cells. The Genome Browser shows only where the gene sits in the genome, its structure, and its variants.
+2.  Why can the same gene have different expression levels among cell types?
+ Every cell has the same DNA, but different cell types turn genes on and off through regulation. A gene’s level also depends on how active, dividing, or specialized the cell is.
+3.  Why should zero or very low single-cell expression be interpreted carefully?
+ single-cell methods often miss lowly expressed genes (dropout), so a zero does not prove the gene is off. Small cell numbers and sample type can also distort the picture.
+4.  Why combine genomic location, variants, and cell-specific expression?
+location and variants show what could change in the gene, and expression shows which cells might be affected.
+5.  What was the most interesting observation about BRCA1?
+BRCA1 was low in nearly every cell type, unlike marker genes such as LYZ, which separated cell types clearly. It acts as a widely expressed repair gene, not a cell-type marker.
 
 ## 11. References and Links
 
 - UCSC Cell Browser: https://cells.ucsc.edu/
-- Dataset and original publication: []
-
-- TO BE PASTED
+- National Center for Biotechnology Information. (n.d.). NM_007294.4(BRCA1):c.5266dup (p.Gln1756fs) (VCV000017677). ClinVar. Retrieved October 7, 2026, from https://www.ncbi.nlm.nih.gov/clinvar/variation/17677/
